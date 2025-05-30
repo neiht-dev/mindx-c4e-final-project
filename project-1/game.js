@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 console.log("Load game");
 let startStopButton = document.querySelector("#start-stop-button");
 let clock = document.querySelector("#clock-display");
@@ -133,11 +134,6 @@ function checkYouWin() {
         // Wait for the last render
         setTimeout(() => {
             if (modalYouWin) {
-                // Add steps display to modal
-                const stepsDisplay = document.createElement('p');
-                stepsDisplay.textContent = `Steps: ${steps}`;
-                stepsDisplay.className = 'text-xl font-semibold';
-                modalYouWin.insertBefore(stepsDisplay, playAgainButton);
                 // Add to history
                 addToHistory(steps, time);
                 modalYouWin.classList.remove("hidden");
@@ -166,6 +162,7 @@ function addToHistory(steps, time) {
 }
 function initMoving() {
     document.addEventListener("keydown", function (event) {
+        console.log(event.key);
         // event.preventDefault();
         if (!gameOn) {
             return;
@@ -258,5 +255,9 @@ playAgainButton === null || playAgainButton === void 0 ? void 0 : playAgainButto
     modalYouWin === null || modalYouWin === void 0 ? void 0 : modalYouWin.classList.add("hidden");
     shuffle();
     gameStart();
+});
+(_a = document.querySelector("#simulate-win")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
+    blocks = [...ORIGINAL_BLOCKS];
+    move(Direction.Left);
 });
 gameInit();

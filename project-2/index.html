@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindX Quiz</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-gray-200 flex items-center justify-center p-10">
+
+  <!-- Quiz container -->
+  <div class="w-[500px] bg-white rounded-lg shadow-md">
+
+    <!-- Title -->
+    <div class="p-5 text-center text-red-600 text-xl font-bold">
+      MindX Quiz
+    </div>
+
+    <!-- Quiz -->
+    <div id="quiz" class="flex flex-col gap-5 p-5 hidden">
+
+      <!-- question number and score -->
+        <div class="flex justify-between">
+          <div id="question-number" class="text-sm font-bold"></div>
+          <div id="score-display" class="text-sm text-red-600 font-bold"></div>
+        </div>
+
+      <!-- question -->
+      <h2 id="question" class="text-lg">
+        Câu hỏi
+      </h2>
+
+      <div id="answers" class="flex flex-col gap-2">
+        <button id="answer-1" class="w-full text-left px-4 py-2 border border-gray-300 rounded-md cursor-pointer">Câu trả lời 1</button>
+        <button id="answer-2" class="w-full text-left px-4 py-2 border border-gray-300 rounded-md cursor-pointer">Câu trả lời 2</button>
+        <button id="answer-3" class="w-full text-left px-4 py-2 border border-gray-300 rounded-md cursor-pointer">Câu trả lời 3</button>
+        <button id="answer-4" class="w-full text-left px-4 py-2 border border-gray-300 rounded-md cursor-pointer">Câu trả lời 4</button>
+      </div>
+
+
+      <button id="next-button" class="w-full py-2 bg-red-600 text-white rounded-md cursor-pointer">
+        Câu tiếp theo
+      </button>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="p-5 text-center space-y-4 hidden">
+      <h2 class="text-xl font-bold">Kết quả</h2>
+      <p class="text-xl">
+        Bạn đã đạt được: <span id="your-score" class="text-red-600">0</span> / <span id="total-score">0</span>
+      </p>
+      <button id ="restart-button"
+        class="py-2 px-10 bg-red-600 text-white rounded-md cursor-pointer">
+        Làm lại
+      </button>
+    </div>
+  </div>
+
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

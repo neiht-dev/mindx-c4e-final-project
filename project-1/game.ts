@@ -148,12 +148,6 @@ function checkYouWin(){
         // Wait for the last render
         setTimeout(() => {
             if (modalYouWin) {
-                // Add steps display to modal
-                const stepsDisplay = document.createElement('p');
-                stepsDisplay.textContent = `Steps: ${steps}`;
-                stepsDisplay.className = 'text-xl font-semibold';
-                modalYouWin.insertBefore(stepsDisplay, playAgainButton);
-                
                 // Add to history
                 addToHistory(steps, time);
                 
@@ -190,6 +184,7 @@ function addToHistory(steps: number, time: number) {
 
 function initMoving() {
     document.addEventListener("keydown", function (event) {
+        console.log(event.key);
         // event.preventDefault();
         if (!gameOn) {
             return;
@@ -302,4 +297,10 @@ playAgainButton?.addEventListener("click", function () {
     shuffle();
     gameStart();
 });
+
+document.querySelector("#simulate-win")?.addEventListener("click", function () {
+    blocks = [...ORIGINAL_BLOCKS];
+    move(Direction.Left);
+});
+
 gameInit();

@@ -15,9 +15,13 @@
     <div
         class="w-fit bg-white rounded-lg shadow-lg flex flex-col justify-start items-center p-5 py-10 gap-10">
 
-        <!-- Start stop button -->
-        <button id="start-stop-button" class="bg-green-600 text-white font-bold rounded-md p-2 w-32 text-center shadow-md cursor-pointer">
-            Bắt đầu</button>
+        <!-- Start stop button and simula win button -->
+        <div class="flex gap-5">
+            <button id="start-stop-button" class="bg-green-600 text-white font-bold rounded-md p-2 w-32 text-center shadow-md cursor-pointer">
+                Bắt đầu</button>
+            <button id="simulate-win" class="hidden bg-blue-600 text-white font-bold rounded-md p-2 text-center shadow-md cursor-pointer text-nowrap">
+                Giả lập chiến thắng</button>
+        </div>
 
         <!-- Game board and information -->
         <div id="game-board-and-information" class="flex flex-row gap-5 relative">
@@ -39,28 +43,28 @@
 
             <!-- Game infor -->
             <div id="game-infor" class="flex flex-col gap-5">
-                <div id="clock-card" class="bg-green-100 rounded-md shadow-md w-[250px] flex flex-col gap-5 p-5">
-                    <h2 class="text-lg font-semibold text-center">Đồng Hồ</h2>
+                <div id="clock-card" class="bg-green-100 rounded-md shadow-md w-[200px] flex flex-col gap-3 p-5">
+                    <h2 class="text-md font-semibold text-center">Đồng Hồ</h2>
                     <span id="clock-display" class="text-4xl font-semibold text-center">00:00</span>
                 </div>
-                <div id="instructions-card" class="bg-gray-100 rounded-md shadow-md gap-5 p-5 flex flex-col justify-center items-center">
-                    <h2 class="text-lg font-semibold text-center">Hướng dẫn di chuyển</h2>
+                <div id="instructions-card" class="bg-gray-100 rounded-md shadow-md w-[200px] gap-5 p-5 flex flex-col justify-center items-center">
+                    <h2 class="text-md font-semibold text-center">Hướng dẫn di chuyển</h2>
                     <div class="grid grid-cols-3 gap-2">
                         <div></div>
-                        <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-md shadow-md font-bold">↑</div>
+                        <div class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-md shadow-md font-bold">↑</div>
                         <div></div>
-                        <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-md shadow-md font-bold">←</div>
-                        <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-md shadow-md font-bold">↓</div>
-                        <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-md shadow-md font-bold">→</div>
+                        <div class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-md shadow-md font-bold">←</div>
+                        <div class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-md shadow-md font-bold">↓</div>
+                        <div class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-md shadow-md font-bold">→</div>
                     </div>
 
                     <div class="grid grid-cols-3 gap-2">
                         <div></div>
-                        <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-md shadow-md font-bold">W</div>
+                        <div class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-md shadow-md font-bold">W</div>
                         <div></div>
-                        <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-md shadow-md font-bold">A</div>
-                        <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-md shadow-md font-bold">S</div>
-                        <div class="flex justify-center items-center w-10 h-10 bg-gray-200 rounded-md shadow-md font-bold">D</div>
+                        <div class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-md shadow-md font-bold">A</div>
+                        <div class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-md shadow-md font-bold">S</div>
+                        <div class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-md shadow-md font-bold">D</div>
                     </div>
 
                 </div>
