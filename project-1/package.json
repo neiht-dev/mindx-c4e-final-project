@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./input.css -o ./style.css --watch",
+    "ts": "npx tsc --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "tailwindcss": "^4.1.8",
+    "typescript": "^5.8.3"
+  }
+}
