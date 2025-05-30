@@ -79,6 +79,12 @@ function renderQuestion() {
     nextButton.classList.remove("bg-red-600");
     nextButton.classList.add("bg-gray-400");
     nextButton.disabled = true;
+    if (currentIndex === questions.length - 1) {
+        nextButton.textContent = "Kết thúc";
+    }
+    else {
+        nextButton.textContent = "Câu tiếp theo";
+    }
     isAnswered = false;
 }
 function selectAnswer(selectedIndex) {
